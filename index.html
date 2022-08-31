@@ -8,39 +8,30 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-   <div class="wrapper">
-        <form class="calculater" name="calc" action="">
-            <input class="area" type="text" value="0" readonly>
-            <div class="btn__row">
-                <button class="clear" onclick="Clear()">AC</button>
-                <button class="operator" value="%" onclick="Percent()" >%</button>
-                <button class="operator" value="/" onclick="Operation('/')">/</button> 
-            </div>    
-            <div class="btn__row">
-                <button class="number" value="7" onclick="NumPressed(7)">7</button>
-                <button class="number" value="8" onclick="NumPressed(8)">8</button>
-                <button class="number" value="9" onclick="NumPressed(9)">9</button>
-                <button class="operator" value="*" onclick="Operation('*')">*</button>
-            </div>
-            <div class="btn__row">
-                <button class="number" value="4" onclick="NumPressed(4)">4</button>
-                <button class="number" value="5" onclick="NumPressed(5)">5</button>
-                <button class="number" value="6" onclick="NumPressed(6)">6</button>
-                <button class="operator" value="-" onclick="Operation('-')">-</button>
-            </div>
-            <div class="btn__row">
-                <button class="number" value="1" onclick="NumPressed(1)">1</button>
-                <button class="number" value="2" onclick="NumPressed(2)">2</button>
-                <button class="number" value="3" onclick="NumPressed(3)">3</button>
-                <button class="operator" value="+" onclick="Operation('+')">+</button>
-            </div>
-            <div class="btn__row">
-                <button class="number zero" value="0" onclick="NumPressed(0)">0</button>
-		        <button class="decimal" value="." onclick="Decimal()">.</button>
-			    <button class="equal" value="=" onclick="Operation('=')">=</button> 
-             </div>
-        </form>
-   </div>
+<div class="wrapper">
+    <div id="display" readonly></div>
+        <div class="buttons"> 
+                <div class="button">C</div>
+                <div class="button">&larr;</div>
+                <div class="button" value="%">%</div>
+                <div class="button" value="/">/</div> 
+                <div class="button" value="7">7</div>
+                <div class="button" value="8">8</div>
+                <div class="button" value="9">9</div>
+                <div class="button" value="*">*</div>
+                <div class="button" value="4">4</div>
+                <div class="button" value="5">5</div>
+                <div class="button" value="6">6</div>
+                <div class="button" value="-">-</div>
+                <div class="button" value="1">1</div>
+                <div class="button" value="2">2</div>
+                <div class="button" value="3">3</div>
+                <div class="button" value="+">+</div>
+                <div class="button" value="0">0</div>
+		        <div class="button" value=".">.</div>
+			    <div class="button" id="equal" value="=">=</div> 
+        </div>
+</div>
    <script src="./main.js"></script> 
 </body>
 </html>

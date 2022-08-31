@@ -1,30 +1,19 @@
-const area = document.querySelector (".area");
-area.innerHTML = "";
-const number = document.querySelector(".number");
-let oneInput;
-let twoInput;
-let calledOperator;
+let display = document.getElementById('display');
+let buttons = Array.from(document.getElementsByClassName('button')); //array.from метод,который создает массив
 
-const calc = () => {
-    let result;
-    switch ( operator) {
-        case '+':
-            result = parseInt(oneInput) + parseInt(twoInput)
-            break
-        case '-':
-            result = parseInt(oneInput) - parseInt(twoInput)
-            break    
-        case '/':
-            result = parseInt(oneInput) / parseInt(twoInput)
-            break
-        case '*':
-            result = parseInt(oneInput) * parseInt(twoInput)
-            break
-        case '%':
-            result = (parseInt(oneInput)/100)*parseInt(twoInput)    
-            break
-        default:
-            return           
-    }
-    twoInput = result.toString()  
-}
+
+//метод .map используется для выполнения над каждым элементом итерируемого объекта 
+//некую последовательность действий.
+buttons.map (button => {
+    button.addEventListener('click', function (e){
+        let event = e.target.innerText;
+        if (event === 'C') {
+            display.innerText = '';
+        }else if (event === '=') {
+                display.innerText = eval(display.innerText);
+        }else if (event = '←') {
+            display.innerText = display.innerText.slice(0, -1);
+        }else {event = display.innerText += e.target.innerText;
+        }
+    });
+});
